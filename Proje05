@@ -1,0 +1,35 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class Proje05 {
+    public static void main(String[] args) {
+
+          int r,a;
+          double alan,cevre,genelFormul,π = 3.14;
+
+          Scanner input = new Scanner(System.in);
+
+          System.out.print("Yarıcap degerini giriniz : ");
+          r = input.nextInt();
+          System.out.print("Dereceyi giriniz : ");
+          a = input.nextInt();
+
+          alan = π * r * r;
+          cevre = 2 * π * r;
+          genelFormul = (π * (r*r)*a)/360;
+
+          System.out.println("Yarıcap Degeri = " +r);
+          System.out.println("Merkez acı degeri = " +a);
+          System.out.println("Alanı = "+alan);
+          System.out.println("Cevresi = " +cevre);
+          System.out.println("Gercek Deger = " + genelFormul);
+
+
+
+
+
+
+
+    }
+}
