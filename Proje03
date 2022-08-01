@@ -5,24 +5,20 @@ import java.util.Scanner;
 public class Proje03 {
     public static void main(String[] args) {
 
-        int birinciDeger,ikinciDeger,ucuncuDeger,ucgenCevresi,ucgenAlani ;
+        int x,y ;
+        double z;
 
 
         Scanner input = new Scanner (System.in);
 
-        System.out.print("birinciDeger : ");
-        birinciDeger= input.nextInt();
-        System.out.print("ikinciDeger : ");
-        ikinciDeger = input.nextInt();
-        System.out.print("ucuncuDeger : ");
-        ucuncuDeger = input.nextInt();
+        System.out.print("birinci kenar degeri: ");
+        x= input.nextInt();
+        System.out.print("ikinci kenar degeri : ");
+        y = input.nextInt();
 
-        ucgenCevresi = birinciDeger+ikinciDeger+ucuncuDeger;
-        ucgenAlani = ucgenCevresi/2 * (ucgenCevresi/2-birinciDeger)*(ucgenCevresi/2-ikinciDeger)*(ucgenCevresi/2-ucuncuDeger);
+        z=Math.sqrt(x*x)+(y*y);
 
-        System.out.println("Ucgen Alanı = " + ucgenAlani);
-        System.out.println("Ucgen Cevresi = " + ucgenCevresi );
-
+        System.out.println("Ucgen Alanı = " + z);
        
 
 
