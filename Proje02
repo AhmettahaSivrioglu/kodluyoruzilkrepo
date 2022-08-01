@@ -1,0 +1,29 @@
+package Giris;
+
+import java.util.Scanner;
+
+
+public class Proje02 {
+    public static void main(String[] args) {
+        double tutar,kdvTutari,kdv,toplamTutar;
+        boolean kdvAnlık;
+
+        Scanner input = new Scanner (System.in);
+
+        System.out.println("Urunun Fiyatını Giriniz :");
+        tutar = input.nextDouble();
+
+        kdvAnlık = (0<tutar) && (1000>tutar);
+        kdv =kdvAnlık ? 0.18 : 0.8;
+
+        kdvTutari = kdv*tutar;
+        toplamTutar = tutar +kdvTutari;
+
+        System.out.println("KDV oran = "+kdv);
+        System.out.println("KDV'siz tutar=" +tutar);
+        System.out.println("KDV'li Tutar = " +toplamTutar);
+        System.out.println("KDV Tutar = " +kdvTutari);
+        
+        
+        <Patika ="https://www.patika.dev/tr"></Patika>
+        [Patika](https://www.patika.dev/tr)
