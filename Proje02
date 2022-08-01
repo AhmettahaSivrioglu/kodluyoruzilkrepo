@@ -25,5 +25,4 @@ public class Proje02 {
         System.out.println("KDV Tutar = " +kdvTutari);
         
         
-        <Patika ="https://www.patika.dev/tr"></Patika>
-        [Patika](https://www.patika.dev/tr)
+        
