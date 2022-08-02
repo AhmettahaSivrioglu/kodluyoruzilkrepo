@@ -1,0 +1,77 @@
+package Giris;
+
+
+import java.util.Scanner;
+
+
+public class Proje07 {
+    public static void main(String[] args) {
+
+         double armuttop,elmatop,domatestop,muztop,patlicantop;
+         double armutfiyati = 2.15 ,elmafiyati = 3.67,domatesfiyati = 1.11 ,muzfiyati = 0.95 ,patlicanfiyati = 5.00,toplamTutar;
+         int armutkilosu,elmakilosu,domateskilosu,muzkilosu,patlicankilosu;
+
+         Scanner input = new Scanner(System.in);
+
+         System.out.print("Armutun kilogramını giriniz :");
+         armutkilosu = input.nextInt();
+         armuttop=(armutfiyati*armutkilosu);
+
+
+
+
+         System.out.print("Elmanın fiyatini giriniz :");
+         elmakilosu = input.nextInt();
+         elmatop=(elmafiyati*elmakilosu);
+
+
+
+
+         System.out.print("Domates fiyatini giriniz :");
+         domateskilosu = input.nextInt();
+         domatestop = (domatesfiyati*domateskilosu);
+
+
+
+         System.out.print("Muz fiyatini giriniz :");
+         muzkilosu = input.nextInt();
+         muztop = (muzfiyati*muzkilosu);
+
+
+
+
+
+         System.out.print("Patlican fiyatini giriniz :");
+         patlicankilosu = input.nextInt();
+         patlicantop= (patlicanfiyati*patlicankilosu);
+
+
+
+
+         toplamTutar = (armutkilosu*2.14)+(elmakilosu*3.67)+(domateskilosu*1.11)+(muzkilosu*0.95)+(patlicankilosu*5.00);
+
+
+         System.out.println("Armut Fiyatı = " +armuttop);
+         System.out.println("Elma Fiyatı = " +elmatop);
+         System.out.println("Domates Fiyatı = " +domatestop);
+         System.out.println("Muz Fiyatı = " +muztop);
+         System.out.println("Patlican Fiyati =" +patlicantop);
+         System.out.println("Toplam Fiyati = " +toplamTutar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
