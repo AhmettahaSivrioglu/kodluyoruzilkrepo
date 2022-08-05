@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Test1 {
+    public static void main(String[] args) {
+        int muzik = 9,mat = 1,turkce = 2,fzk = 3,kimya = 4,ortalama = 5;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Matematik notu :");
+        mat = input.nextInt();
+        if ((mat < 0) || (mat > 100)) {
+            System.out.print("Notunuz gecersiz");
+        } else if (((mat > 0) && (mat < 101))) {
+            System.out.print("Fizik notunu giriniz :");
+            fzk = input.nextInt();
+
+        }
+        if ((fzk < 0) || (fzk > 100)) {
+            System.out.print("Notunuz Gecersiz");
+
+        } else if ((fzk > 0) && (fzk < 101)) {
+            System.out.print("Kimya Notunu Giriniz :");
+            kimya = input.nextInt();
+            if ((kimya < 0) || (kimya > 100)) {
+                System.out.print("Gecersiz Not");
+            } else if ((kimya > 0) && (kimya < 101)) {
+                System.out.print("Muzik Notunuzu Giriniz :");
+                muzik = input.nextInt();
+                if ((muzik < 0) || (muzik > 100)) {
+                    System.out.print("Notunuz Gecersiz");
+
+                } else if ((muzik > 0) && (muzik <= 100)) {
+                    System.out.print("Turkce notunu giriniz :");
+                    turkce = input.nextInt();
+
+                }
+                if ((turkce < 0) || (turkce > 100)) {
+                    System.out.print("Notunuz Gecersiz");
+
+                } else if ((turkce > 0) && (turkce < 101))
+                    ortalama = (mat + fzk + kimya + turkce + muzik) / 5;
+                System.out.print("Ortalamanız :" + ortalama);
+                if ((ortalama >= 55)) {
+                    System.out.print("Sınıfı gectiniz");
+
+
+                }else {
+                    System.out.print("Kaldınız");
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+}
