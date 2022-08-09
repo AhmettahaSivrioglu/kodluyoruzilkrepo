@@ -1,0 +1,114 @@
+import java.util.Scanner;
+
+public class ucakBileti {
+    public static void main(String[] args) {
+        int yas, yolculuktipi, mesafe;
+
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Mesafeyi km cinsinden giriniz :");
+        mesafe = input.nextInt();
+        System.out.print("Yasinizi giriniz :");
+        yas = input.nextInt();
+        System.out.print("Yolculuk tipini giriniz :");
+        yolculuktipi = input.nextInt();
+
+
+        if ((yas < 0) || (mesafe < 0) || (yolculuktipi != 1) && (yolculuktipi != 2)) {
+            System.out.print("Hatalı giriş yaptınız !");
+        } else {
+
+            if ((yas <= 12) && (yolculuktipi == 2)) {
+                System.out.print("Kaçıncı seçenek? :");
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.50;
+                double indirimlitutar = normaltutar - yasindirimi;
+                double gidisdonusbiletindirimi = indirimlitutar * 0.20;
+                double toplamtutar = (indirimlitutar - gidisdonusbiletindirimi) * 2;
+
+                System.out.print("toplam = " + toplamtutar);
+            } else if ((yolculuktipi == 1)) {
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.50;
+                double indirimlitutar = normaltutar - yasindirimi;
+                System.out.print("tutar =" + indirimlitutar);
+            }
+
+
+            if ((yas > 12) && (yas <= 24) && (yolculuktipi == 2)) {
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.10;
+                double indirimlitutar = normaltutar - yasindirimi;
+                double gidisdonusbiletindirimi = indirimlitutar * 0.20;
+                double toplamtutar = (indirimlitutar - gidisdonusbiletindirimi) * 2;
+
+                System.out.print("toplam = " + toplamtutar);
+            } else if ((yolculuktipi == 1)) {
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.10;
+                double indirimlitutar = normaltutar - yasindirimi;
+
+                System.out.print("tutar = " + indirimlitutar);
+
+            }
+
+            if ((yas > 65) && (yolculuktipi == 2)) {
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.30;
+                double indirimlitutar = normaltutar - yasindirimi;
+                double gidisdonusbiletindirimi = indirimlitutar * 0.20;
+                double toplamtutar = (indirimlitutar - gidisdonusbiletindirimi) * 2;
+
+                System.out.print("tutar =" + toplamtutar);
+            } else if ((yolculuktipi == 1)) {
+                double normaltutar = mesafe * 0.10;
+                double yasindirimi = normaltutar * 0.30;
+                double indirimlitutar = normaltutar - yasindirimi;
+
+                System.out.print("tutar = " + indirimlitutar);
+            }
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
