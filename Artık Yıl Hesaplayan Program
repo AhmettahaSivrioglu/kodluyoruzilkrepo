@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class artik {
+    public static void main(String[] args) {
+        float year;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Yıl giriniz :");
+        year = input.nextInt();
+
+
+        //(100*k)%400=0=true(year)
+        //400/(k/100)=0
+        //400 ün katı artık yıldır.
+        //100 ün katı olan sayılarda 400 'e tam bölünmüyorsa artık yıl değildir.2100,2300 artık yıl değildir.
+        //
+
+        if((year<0)||((0!=(year)%400)&&(year%100==0))){
+                System.out.print("Artık yıl değildir!");
+        }else if((year%4==0)){
+            System.out.print("Artık yıldır.");
+
+        }else{
+            System.out.print("Artık yıl değildir");
+        }
