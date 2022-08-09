@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class cinZodyagi {
+    public static void main(String[] args) {
+        int dogumyili ;
+        
+        
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Dogum yilinizi girin :");
+        dogumyili = input.nextInt();
+
+
+        double kalansayi = (dogumyili%12);
+
+    
+        if((kalansayi==0)){
+            System.out.print("Maymun burcusunuz");
+            
+        } else if ((kalansayi==1)) {
+            System.out.print("Horoz burcusunuz");
+            
+        } else if ((kalansayi==2)) {
+            System.out.print("Köpek burcusunuz");
+
+        } else if ((kalansayi ==3)) {
+            System.out.print("Domuz burcusunuz");
+
+        } else if ((kalansayi ==4)) {
+            System.out.print("Fare burcusunuz");
+
+        } else if ((kalansayi ==5)) {
+            System.out.print("Öküz burcusunuz");
+
+        } else if ((kalansayi ==6)) {
+            System.out.print("Kaplan burcusunuz");
+
+        } else if ((kalansayi ==7)) {
+            System.out.print("Tavşan burcusunuz");
+
+        } else if (kalansayi==8) {
+            System.out.print("Ejderha burcusunuz");
+
+        } else if (kalansayi ==9) {
+            System.out.print("Yılan burcusunuz");
+
+        } else if (kalansayi ==10) {
+            System.out.print("At burcusunuz");
+
+        } else if (kalansayi ==11) {
+            System.out.print("Koyun burcusunuz");
+
+        }else{
+            System.out.print("Hatalı giriş yaptınız !");
+        }
+
+
+
+    }
+}
