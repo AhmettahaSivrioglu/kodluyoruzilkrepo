@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+
+public class ciftSayi {
+    public static void main(String[] args) {
+
+            Scanner input = new Scanner(System.in);
+
+            int sayi,adet=0;
+
+            double toplam=0,ortalama;
+
+            System.out.print("Sayi Giriniz :");
+            sayi = input.nextInt();
+
+            
+            for (int i=1; i<=sayi; i++ ){
+                if((i%4==0)&&(i%3==0)) {
+
+                    System.out.println("\n3 ve 4 e bölünen sayılar =" + i);
+
+                    toplam += i;
+
+                    adet++;
+                    
+                }
+                
+                }
+                System.out.println("toplam=" +toplam);
+                ortalama = toplam/adet;
+                System.out.println("ortalama = " +ortalama);
+
+    }
+
+
+}
