@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+
+public class combination {
+    public static void main(String[] args) {
+       // C(n,r) = n! / (r! * (n-r)!)
+       // we want to find both n and r values because we have to substition values.
+
+        Scanner input = new Scanner( System.in);
+        int n,total1=1,r,total2=1;
+
+        System.out.print("write the n value :");
+        n = input.nextInt();
+        System.out.print("write the r value :");
+        r = input.nextInt();
+
+        System.out.println("----------------------");
+
+        while (0<n){
+            System.out.println("n value = "+n);
+            total1 *=n;
+            n--;
+        }
+
+        System.out.println("value of n = " +total1);
+
+
+        while (0<r){
+            System.out.println("r value :" +r);
+            total2 *=r;
+            r--;
+
+        }
+
+        System.out.println("value of r = " +total2);
+
+        int combination= total1/total2;
+
+        System.out.println("this is combination of value = " +combination);
