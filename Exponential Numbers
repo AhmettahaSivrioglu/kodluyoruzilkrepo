@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class exponentialNumbers {
+    public static void main(String[] args) {
+        int a, number;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Write the value of a:");
+        a = input.nextInt();
+        System.out.print("Write the value of number :");
+        number = input.nextInt();
+
+        System.out.print("Loading ----------");
+
+        int exponent = 0;
+        for (int i = 0; i <= number; i++) {
+
+            exponent = (int) Math.pow(a, i);
+
+
+        }
+
+
+        System.out.println("value of exponential = " + exponent);
+        System.out.println("Loop is over.");
+
+    }
+}
