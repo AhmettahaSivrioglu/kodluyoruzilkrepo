@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class atm {
+    public static void main(String[] args) {
+
+        String username,password;
+        int right = 3;
+        int balance = 5000;
+        int select;
+
+
+        Scanner input = new Scanner(System.in);
+
+        while(right>0) {
+            System.out.print("Write your username :");
+            username = input.nextLine();
+
+            System.out.print("Write your password :");
+            password = input.nextLine();
+
+
+            if (username.equals("Taha") && (password.equals("1996"))) {
+                System.out.println("Welcome The Big Bang Bank !");
+
+
+                do {
+                    System.out.println("1-Investment\n"+
+                    "2-Withdraw\n"+
+                    "3-Balance\n"+
+                    "4-Log Out");
+
+                    System.out.print("Select the operation you want to do :");
+                    select = input.nextInt();
+
+                    switch (select) {
+
+                        case 1:
+                            System.out.print("Enter the amount of money you want to investment :");
+                            int price = input.nextInt();
+                            balance += price;
+                            break;
+
+                        case 2:
+                            System.out.print("Enter the amount of money you want to withdraw :");
+                            price = input.nextInt();
+                            if(price>balance){
+                                System.out.println("Not enough balance!");
+
+                            }else{
+                                balance -= price;
+                            }
+                            break;
+
+                        case 3:
+                            System.out.println("Balance" + balance);
+                            break;
+
+                        case 4:
+                            System.out.println("See you later,our precious customer!");
+                            break;
+
+                    }
+
+                } while (select != 4);
+                break;
+            } else {
+                right--;
+                System.out.println("Username or password not true");
+
+
+                if (right == 0) {
+                    System.out.println("Call the bank ");
+                } else {
+                    System.out.println("Your Remaining Right " + right);
+                }
+
+                }
+
+            }
+
+
+
+
+
+    }
+
+            }
