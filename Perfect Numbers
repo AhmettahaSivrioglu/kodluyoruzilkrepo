@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class perfectNumber {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int value=0;
+        // 12 = 4.3=1+2+3+4+6,28=4.7=1+2+4+7+14,16=8.2=1+2+4+8
+
+        System.out.print("Enter the number :");
+        int number = input.nextInt();
+
+        for(int i=1; i<=number; i++) {
+            if (number % i == 0 && number !=i) {
+                System.out.println(+i);
+                value +=i;
+            }
+
+        }
+        if(value==number){
+            System.out.println("\nThis is a perfect number " +number);
+        }else {
+            System.out.println("\nThis is not a perfect number " +number);
+        }
+
+
+    }
+}
