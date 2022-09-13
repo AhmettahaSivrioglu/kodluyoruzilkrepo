@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class karsilastirma {
+    public static void main(String[] args) {
+
+        //We suppose to entered 4 numbers,for instance system say to us "enter the number" four times.
+        // How can we provide this system?
+
+        Scanner input = new Scanner(System.in);
+
+
+        int select;
+
+        do {
+            int number1,number2,number3;
+            System.out.print("Enter the first number :");
+            number1=input.nextInt();
+            System.out.print("Enter the second number :");
+            number2 = input.nextInt();
+            System.out.print("Enter the third number :");
+            number3=input.nextInt();
+
+            System.out.print("Write you want to do : ");
+            select = input.nextInt();
+
+            switch (select) {
+                case 1:
+                if (number1 < number2 && number1 < number3) {
+                    if (number3 > number2) {
+                        System.out.println("the biggest number : " + number3);
+                        System.out.println("the middle number : " + number2);
+                        System.out.println("the least number : " + number1);
+                    } else if (number2 > number3) {
+                        System.out.println("the biggest number :" + number2);
+                        System.out.println("the middle number :" + number3);
+                        System.out.println("the least number : " + number1);
+                    }
+                        break;
+                }
+                case 2:
+                if (number2 < number1 && number2 < number3) {
+                    if (number1 < number3) {
+                        System.out.println("the biggest number :" + number3);
+                        System.out.println("the middle number : " + number1);
+                        System.out.println("the least number : " + number2);
+                    } else if (number1 > number3) {
+                        System.out.println("the biggest number :" + number1);
+                        System.out.println("the middle number :" + number3);
+                        System.out.println("the least number " + number2);
+                    }
+                        break;
+                }
+                case 3:
+                if (number3 < number2 && number3 < number1) {
+                    if (number2 < number1) {
+                        System.out.println("the biggest number :" + number1);
+                        System.out.println("the middle number : " + number2);
+                        System.out.println("the least number :" + number3);
+                    } else if (number1 < number2) {
+                        System.out.println("the biggest number : " + number2);
+                        System.out.println("the middle number : " + number1);
+                        System.out.println("the least number : " + number3);
+                    }
+                }
+                        break;
+            }
+            } while (select !=4);
+                System.out.print("Try Again ");
+
+    }
+}
